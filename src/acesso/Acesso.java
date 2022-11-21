@@ -34,6 +34,7 @@ public class Acesso {
 		System.out.println("Informe id: ");
 		int id = sc.nextInt();
 		crud.getById(id);
+		crud.getIndex(id);
 //		System.out.println("Informe um id para remover:");
 //		int id = sc.nextInt();
 //		crud.removeById(id);

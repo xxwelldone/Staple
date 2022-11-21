@@ -66,9 +66,11 @@ public class CRUD {
 	// array
 
 	// Percorre Array por tamanho de Ids cadastrados e retorna id-1 (index do array)
-	public void getIndex() {
+	public void getIndex(int idx) {
 		for (int i = 0; i < id; i++) {
-			System.out.println(String.valueOf(cc[i].getId() - 1));
+			if (cc[i].getId()==idx) {
+				System.out.println(String.valueOf(cc[i].getId() - 1));
+			}
 		}
 	}
 
