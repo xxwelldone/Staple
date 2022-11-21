@@ -54,9 +54,11 @@ public class CRUD {
 	}
 
 	// Percorre Array por tamanho de Ids cadastrados
-	public void getByAllId() {
+	public void getById(int idx) {
 		for (int i = 0; i < id; i++) {
-			System.out.println(String.valueOf(cc[i]));
+			if(cc[i].getId()==idx) {
+				System.out.println(cc[i]);
+			}
 		}
 	}
 

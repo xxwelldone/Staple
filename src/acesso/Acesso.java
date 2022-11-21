@@ -21,22 +21,24 @@ public class Acesso {
 			crud.add(cc);
 //			System.out.println(cc.getId());
 		}
-		crud.getByAllId();
+	
 
-		System.out.println("Quantas cadastros?");
-		int w = sc.nextInt();
-		for (int i = 0; i < w; i++) {
-
-			Food cc = new Food("Melão", "Italia", 10, 10.99, "TTi");
-			crud.add(cc);
-//			System.out.println(cc.getId());
-		}
-		crud.getByAllId();
-		System.out.println("Informe um id para remover:");
+//		System.out.println("Quantas cadastros?");
+//		int w = sc.nextInt();
+//		for (int i = 0; i < w; i++) {
+//
+//			Food cc = new Food("Melão", "Italia", 10, 10.99, "TTi");
+//			crud.add(cc);
+////			System.out.println(cc.getId());
+//		}
+		System.out.println("Informe id: ");
 		int id = sc.nextInt();
-		crud.removeById(id);
-		System.out.println("Informe um index para remover:");
-		crud.getIndex();
+		crud.getById(id);
+//		System.out.println("Informe um id para remover:");
+//		int id = sc.nextInt();
+//		crud.removeById(id);
+//		System.out.println("Informe um index para remover:");
+//		crud.getIndex();
 //		crud.xx();
 
 //		System.out.println("Informe um id para remover:");
