@@ -1,6 +1,7 @@
 package operacao;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class CRUD {
 	// id representa id atribuido a cada objeto cadastrado e espaço consumido
@@ -53,10 +54,66 @@ public class CRUD {
 
 	}
 
+	public void updateById(int idx) {
+		for (int i = 0; i < id; i++) {
+			if (cc[i].getId() == idx) {
+				System.out.println("Informe qual atributo alterar:");
+				;
+				System.out.println("1 - Nome");
+				System.out.println("2 - Origem");
+				System.out.println("3 - Unidade");
+				System.out.println("4 - Preço (ex: 0,99)");
+				System.out.println("5 - Fabricante");
+				Scanner sc = new Scanner(System.in);
+				int op = sc.nextInt();
+				switch (op) {
+				case 1:
+					System.out.println("Informe nome atualizado:");
+					sc.nextLine();
+					String nome = sc.nextLine();
+					cc[i].setNome(nome);
+
+					break;
+				case 2:
+					System.out.println("Informe origem atualizada:");
+					sc.nextLine();
+					String origem = sc.nextLine();
+					cc[i].setOrigem(origem);
+
+					break;
+				case 3:
+					System.out.println("Informe quantidade de unidades atualizada:");
+					int unidades = sc.nextInt();
+					cc[i].setUnidade(unidades);
+
+					break;
+				case 4:
+					System.out.println("Informe preço atualizado(ex: 1,99):");
+					double preco = sc.nextDouble();
+					cc[i].setPreco(preco);
+					break;
+				case 5:
+					System.out.println("Informe fabricante atualizada:");
+					sc.nextLine();
+					String fabricante = sc.nextLine();
+					cc[i].setFabricante(fabricante);
+
+					break;
+				default:
+					System.out.println("Você não informou uma opção válida");
+					break;
+
+				}
+				System.out.println("Atualizado:");
+				System.out.println(cc[i]);
+			}
+		}
+	}
+
 	// Percorre Array por tamanho de Ids cadastrados
 	public void getById(int idx) {
 		for (int i = 0; i < id; i++) {
-			if(cc[i].getId()==idx) {
+			if (cc[i].getId() == idx) {
 				System.out.println(cc[i]);
 			}
 		}
@@ -68,7 +125,7 @@ public class CRUD {
 	// Percorre Array por tamanho de Ids cadastrados e retorna id-1 (index do array)
 	public void getIndex(int idx) {
 		for (int i = 0; i < id; i++) {
-			if (cc[i].getId()==idx) {
+			if (cc[i].getId() == idx) {
 				System.out.println(String.valueOf(cc[i].getId() - 1));
 			}
 		}
