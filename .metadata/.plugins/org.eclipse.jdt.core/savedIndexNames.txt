@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Users\User\Desktop\Programação\Udemy\Staple\.metadata\.plugins\org.eclipse.jdt.core
+3428127124.index
+1865797976.index
+855046387.index
+3499805443.index
+2788141678.index
+2564823970.index
