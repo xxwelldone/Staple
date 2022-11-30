@@ -58,7 +58,6 @@ public class Food {
 	}
 
 	public Food(String nome, String origem, int unidade, double preco, String fabricante) {
-		super();
 		this.nome = nome;
 		this.origem = origem;
 		this.unidade = unidade;

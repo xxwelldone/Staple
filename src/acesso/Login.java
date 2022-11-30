@@ -11,6 +11,9 @@ import javax.swing.JTextField;
 
 
 public class Login {
+	/**
+	 * @wbp.parser.entryPoint
+	 */
 	public void show() {
 		// Setting Frame and Panel that's going above the frame
 		JFrame frame = new JFrame("Login");
@@ -40,9 +43,9 @@ public class Login {
 			String user = userLoginText.getText();
 			String pass = String.valueOf(pwLoginText.getPassword());
 
-			if ("teste@ulife.com".equals(user) && "123456".equals(pass)) {
-				//Staple staple = new Staple();
-				//staple.show();
+			if ("admin".equals(user) && "admin".equals(pass)) {
+				Staple staple = new Staple();
+				staple.setVisible(true);
 				frame.setVisible(false);
 			} else {
 				JOptionPane.showMessageDialog(null, "Make sure you typed everything correctly");
@@ -55,7 +58,7 @@ public class Login {
 		panel.add(pwLogin);
 		panel.add(pwLoginText);
 		panel.add(btnLogin);
-		frame.add(panel);
+		frame.getContentPane().add(panel);
 		frame.getRootPane().setDefaultButton(btnLogin);
 
 		frame.setVisible(true);
